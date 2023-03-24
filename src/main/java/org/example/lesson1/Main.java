@@ -1,4 +1,4 @@
-package org.example;
+package org.example.lesson1;
 
 import org.openjdk.jol.info.ClassLayout;
 import org.openjdk.jol.vm.VM;
