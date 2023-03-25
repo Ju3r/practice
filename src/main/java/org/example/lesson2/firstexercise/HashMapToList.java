@@ -7,7 +7,8 @@ import java.util.Map;
 
 public class HashMapToList {
     private static Map<String, Integer> map = new HashMap<>();
-    public static void hashMapToListExample() {
+
+    public static void main(String[] args) {
         System.out.println("\n*** HASHMAP TO LIST EXAMPLE ***");
         map.put("apple", 5);
         map.put("banana", 6);

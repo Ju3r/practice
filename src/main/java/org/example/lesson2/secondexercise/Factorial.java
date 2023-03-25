@@ -3,9 +3,8 @@ package org.example.lesson2.secondexercise;
 import java.math.BigInteger;
 
 public class Factorial {
-    private static int counter = 0;
-    public static void factorialExample() {
-        int n = 21;
+    public static void main(String[] args) {
+        int n = 21000;
         long resultLong = factorialLong(n);
         BigInteger resultBigInt = factorialBigInt(n);
         System.out.printf("Factorial of %d is %d (Long)\n", n, resultLong);

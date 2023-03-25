@@ -9,6 +9,12 @@ repositories {
     mavenCentral()
 }
 
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
 dependencies {
     implementation 'org.openjdk.jol:jol-core:0.16'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'

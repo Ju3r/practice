@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 
 public class ListToHashMap {
     private static List<String> list = List.of("apple", "banana", "orange", "pear");
-    public static void ListToHashMapExample() {
+    public static void main(String[] args) {
         System.out.println("\n*** LIST TO HASHMAP EXAMPLE ***");
         System.out.println("LIST: " + list);
         Map<String, Integer> map = list.stream()

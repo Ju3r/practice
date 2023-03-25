@@ -2,6 +2,7 @@ package org.example.lesson2.firstexercise;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class ListInsideList {
     private static List<List<Integer>> nestedList = Arrays.asList(
@@ -9,16 +10,13 @@ public class ListInsideList {
             Arrays.asList(4, 5, 6),
             Arrays.asList(7, 8, 9)
     );
-    public static void listInsideListExample() {
+
+    public static void main(String[] args) {
         System.out.println("\n*** LIST INSIDE LIST EXAMPLE ***");
         System.out.println("LIST: " + nestedList);
 
-        List<Integer> bottomList = nestedList.stream()
-                .reduce((first, second) -> second)
-                .orElseThrow(() -> new RuntimeException("Nested list is empty"));
-
-        System.out.println("NESTED LIST: ");
-        bottomList.forEach(System.out::println);
+        System.out.println("FLATTENED LIST: ");
+        nestedList.stream().forEach(System.out::println);
         System.out.println("*** END EXAMPLE ***");
     }
 }
