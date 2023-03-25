@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class HashMapToList {
     private static Map<String, Integer> map = new HashMap<>();
@@ -16,7 +17,9 @@ public class HashMapToList {
         map.put("pear", 4);
         System.out.println("HASHMAP: " + map);
 
-        List<Map.Entry<String, Integer>> list = new ArrayList<>(map.entrySet());
+        List<String> list = map.entrySet().stream()
+                .map(entry -> entry.getKey() + "-" + entry.getValue())
+                .collect(Collectors.toList());
         System.out.println("LIST: " + list);
         System.out.println("*** END EXAMPLE ***");
     }

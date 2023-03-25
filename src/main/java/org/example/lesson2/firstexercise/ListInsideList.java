@@ -15,8 +15,12 @@ public class ListInsideList {
         System.out.println("\n*** LIST INSIDE LIST EXAMPLE ***");
         System.out.println("LIST: " + nestedList);
 
+        List<Integer> flattenedList = nestedList.stream()
+                .flatMap(List::stream)
+                .collect(Collectors.toList());
+
         System.out.println("FLATTENED LIST: ");
-        nestedList.stream().forEach(System.out::println);
+        flattenedList.forEach(System.out::println);
         System.out.println("*** END EXAMPLE ***");
     }
 }
