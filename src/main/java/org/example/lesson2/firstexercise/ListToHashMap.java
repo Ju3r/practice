@@ -1,4 +1,4 @@
-package org.example.lesson2.fistexercise;
+package org.example.lesson2.firstexercise;
 
 import java.util.List;
 import java.util.Map;
